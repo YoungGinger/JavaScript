@@ -16,7 +16,7 @@
       let score = JSON.parse(localStorage.getItem('score')) ||{
         wins: 0,
         losses: 0,
-      } s
+      } 
 
       function playGame(playerMove){     
         const computerMove = pickComputerMove();
@@ -31,7 +31,7 @@ you win: ${score.wins}, you lose: ${score.losses}`);
         let computerMove = '';
         const randomNumber = Math.random();
         computerMove = randomNumber < 0.5 ? 'heads' : 'tails';
-        return computerMove
+        return computerMove;
       }
       
     </script>
