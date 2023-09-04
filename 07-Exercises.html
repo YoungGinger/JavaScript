@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>Lesson 7 exercises</title>		
+	</head>
+	<body>
+		<script>
+     /*
+     function greet(name) {
+      if (!name){
+        console.log('hi there!');
+      } else {
+        console.log(`hello ${name}`);
+      }
+     }
+     greet();
+     greet('marcin');
+     greet('pawel');
+     */
+     
+     function converToFahrenheit(celcius) {
+      return (celcius * 9/5) + 32;
+     }
+    
+    
+     function convertToCelcius(fahrenheit) {
+      return (fahrenheit - 32) * 5 / 9;
+     }
+         
+
+     function convertTemperature(degrees, unit) {
+       if (unit === 'C'){
+         const result =  converToFahrenheit(degrees);
+         return `${result} F`;
+       } else if (unit == 'F') { 
+        const result = convertToCelcius(degrees);
+        return `${result} C`;
+       } else {
+        console.log('you input wrong unit!');
+       }
+    }
+     console.log(convertTemperature(25, 'C'));
+     console.log(convertTemperature(86, 'F'));
+		</script>
+	</body>
+</html>

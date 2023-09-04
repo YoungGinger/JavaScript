@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>HTML CSS REVIEW</title>
+			<style>
+				/*
+					This is a comment.
+				*/
+			.orange-button {
+				background-color: orange;
+			}
+
+			.yellow-button {
+				background-color: yellow;
+			}
+			</style>
+	</head>
+
+	<body>
+      <p>Adults Plain Cotton T-shirt</p>
+      <p>price: $7.99</p>
+      <button class="yellow-button" onclick="
+      alert('Added');"    
+      >Add to cart</button>
+      <button class="orange-button" onclick="
+      console.log('loading...');
+      alert('Purchased');"    
+      >Add to cart</button>
+
+			<button onclick="
+      console.log(`Cart quanity: ${cartQuantity}`);
+    ">Show Quantity</button>
+
+    <button onclick="
+      cartQuantity += 1;
+      console.log(`Cart quantity: ${cartQuantity} `);
+    ">Add to Cart</button>
+
+    <button onclick="
+      cartQuantity += 2;
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">+2</button>
+
+    <button onclick="
+       cartQuantity += 3;
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">+3</button>
+		
+		<button onclick="
+       cartQuantity += 4;
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">+4</button>
+
+		<button onclick="
+       cartQuantity += 5;
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">+5</button>
+
+    <button onclick="
+       cartQuantity = 0;
+        console.log(`cart was reset`);
+    ">Reset Cart</button>
+    
+    <button onclick="
+       cartQuantity--;
+        console.log(`the Quanity was decresded: ${cartQuantity}`);
+    ">Remove from cart</button>
+
+		<button onclick="
+			cartQuantity -= 2;
+ 			console.log(`the Quanity was decresded: ${cartQuantity}`);
+		">Remove two products from cart</button>	
+		
+		<button onclick="
+			cartQuantity -= 3;
+ 			console.log(`the Quanity was decresded: ${cartQuantity}`);
+		">Remove three products from cart</button>	
+
+		<script>
+			let cartQuantity = 0;
+
+			let name = 'Marcin';
+			console.log(`my name is: ${name}`);
+			let cost = 1 * 5 + 2 * 3 + 1 * 9;
+			console.log(`Cost of food: $${cost}`)
+			
+			let tax = cost * 0.1
+			console.log(`Tax (10%): $${tax}`)
+
+			let total = cost + tax 
+			console.log(`Total cos: $${total}`)
+			
+		</script>
+	</body>
+</html>
