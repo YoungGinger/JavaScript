@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>09-Exercises</title>		
+	</head>
+	<body>
+    
+    <p>
+    <button>9a</button>
+    <button class="js-button-b">9b</button>
+    </p>
+    <button onclick="
+      document.querySelector('.js-choice').
+        innerText = `You chose: Heads`;
+    ">Heads</button>
+    <button onclick="
+     document.querySelector('.js-choice').
+        innerText = `You chose: Tails`;
+    ">Tails</button>
+    <p class="js-choice"></p> 
+    <input placeholder="Name" class="js-inputName" onkeydown="
+       handleKeyDown(event);
+    ">
+    <button onclick="
+
+       yourName();
+    ">Submit</button>
+
+    <p class="js-showName"></p>
+    <input class="js-Key-Up" onkeyup="
+     const inputElement2 = document.querySelector('.js-Key-Up');
+     document.querySelector('.js-input-key-up')
+      .innerHTML = inputElement2.value; 
+     
+      
+    ">
+    <p class="js-input-key-up"></p>
+
+		<script>
+      
+      const show = document.querySelector('button');
+      console.log(show);
+
+      document.querySelector('.js-button-b')
+        .innerHTML = `9b done!`;
+
+      function yourName () { 
+        const inputElement = document.querySelector('.js-inputName');
+        document.querySelector('.js-showName').
+        innerText = `Your name is: ${inputElement.value}`;
+      }
+
+      function handleKeyDown (event) {
+        if (event.key === 'Enter') {
+         yourName();
+       }
+      }
+      
+    
+      
+		</script>
+	</body>
+</html>

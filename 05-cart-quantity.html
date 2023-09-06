@@ -61,7 +61,7 @@
         cartQuantity += 2;
        }
  			console.log(`the Quanity was decresded: ${cartQuantity}`);
-		">Remove two products from cart</button>	
+		">-2</button>	
 		
 		<button onclick="
 			cartQuantity -= 3;
@@ -70,11 +70,13 @@
         cartQuantity += 3;
        }
  			console.log(`the Quanity was decresded: ${cartQuantity}`);
-		">Remove three products from cart</button>	
+		">-3</button>	
+    <P class="js-display-quantity"></P>
 		<script>
       let cartQuantity = 0;  
       let cartMax = 0;
       
+      function displayQuantity();
 
 
 		</script>
