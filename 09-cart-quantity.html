@@ -45,10 +45,13 @@
       cartQuantity = 0;
       console.log('Cart was reset.');   
       localStorage.removeItem('cartQuantity');
+      displayQuantity();
+
     ">Reset Cart</button>
 
     <p class="js-display-quantity"></p>
     <script>
+
       let cartQuantity = JSON.parse(localStorage.getItem('cartQuantity')) || 0;
 
       function updateCartQuantity(change) {
@@ -64,11 +67,15 @@
 
         cartQuantity += change;
         localStorage.setItem('cartQuantity',JSON.stringify(cartQuantity));
+        displayQuantity();
+
+      } 
+      
+       function displayQuantity() {
         document.querySelector('.js-display-quantity')
         .innerHTML = `Cart quantity: ${cartQuantity}`;
-      }
-      
-      
+      } 
+      displayQuantity();
 
     </script>
   </body>
