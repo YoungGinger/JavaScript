@@ -7,36 +7,27 @@
     href="styles/10-Exercises.css"
   >
 	</head>
+  <body>
     <button class="add-to-cart-button">Add to Cart</button>
   <p>
     <button class="request-button">Request now</button>
     <button class="schedulde-button">Schedulde for later</button>
   </p>
     <button class="js-button">Test</button>
-	<body>
   <p>
     <button onclick="
-      gamingButton();
+      gamingButton(gaming, 'gaming');
       " class="gaming-button js-gaming-button">Gaming</button>  
-  </p>
-		<script>
-		  const test = document.querySelector('.js-button');
-      console.log(test.classList.contains('js-button'));
-      let gaming = document.querySelector('.js-gaming-button');
-      console.log(gaming.classList);
 
-      function gamingButton () {       
-        
-        if (gaming.classList.value !== 'gaming-button js-gaming-button'){
-          gaming.classList.remove('is-toggled');
-          console.log('hehe');
-          console.log(gaming.classList);
-        } else {
-          gaming.classList.add('is-toggled');
-          console.log('xD');
-          console.log(gaming.classList);
-        }
-      }
-		</script>
+    <button onclick="
+      gamingButton(music, 'music');  
+    " class="gaming-button js-music-button">Music</button>
+
+    <button onclick="
+      gamingButton(tech, 'tech')
+      "class="gaming-button js-tech-button">Tech</button>
+
+  </p>
+		<script src="scripts/10-Exercises.js"></script>
 	</body>
 </html>
