@@ -131,7 +131,7 @@ function countPositive (array) {
 return x;
 }
 console.log(countPositive([1, 3, 2, 10, -4, -5, 10]));
-*/
+
 
 
 function minMax(array) {
@@ -151,3 +151,79 @@ minMax([null]);
 
 const array = [5, 3, 2, 1];
 console.log(array.sort());
+
+
+function arraySwap(array) {
+  let first = array[0];
+  let last = array[array.length - 1];
+  array[0] = last;
+  array[array.length -1] = first;
+  
+  return array;
+}
+
+console.log(arraySwap([1, 2, 3, 4, 5]));
+console.log(arraySwap(['hi', 'hello', 'yo']));
+
+
+function countWords(words) {
+  const result = {};
+
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i];
+
+   
+    if (!result[word]) {
+      result[word] = 1;
+    } else {
+      result[word]++;
+    }
+  }
+
+  return result;
+}
+
+console.log(countWords(['apple', 'grape', 'apple', 'apple']));
+
+
+let words = ['hello', 'world', 'search', 'good', 'search'];
+
+let index = -1;
+
+for (let i = 0; i < words.length; i++) {
+  if (words[i] === 'search') {
+    index = i;
+    break;
+  }
+}
+
+console.log(index);
+
+words = ['not', 'found'];
+index = -1;
+
+for (let i = 0; i < words.length; i++) {
+  if (words[i] === 'search') {
+    index = i;
+  }
+}
+
+console.log(index);
+*/
+let index = -1;
+
+function findIndex(array, word) {
+  
+  for (let i = 0; i < array.length; i++) {
+      if (array[i] === word) {
+        index = i;
+      } 
+}
+return index;
+}
+console.log(findIndex(['green', 'red', 'blue', 'red'], 'blue'));
+console.log(findIndex([]));
+
+
+
+
