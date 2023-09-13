@@ -209,7 +209,7 @@ for (let i = 0; i < words.length; i++) {
 }
 
 console.log(index);
-*/
+
 let index = -1;
 
 function findIndex(array, word) {
@@ -217,13 +217,101 @@ function findIndex(array, word) {
   for (let i = 0; i < array.length; i++) {
       if (array[i] === word) {
         index = i;
+        return index;
       } 
 }
-return index;
+return -1;
 }
 console.log(findIndex(['green', 'red', 'blue', 'red'], 'blue'));
 console.log(findIndex([]));
 
 
+let array1 = ['ham', 'apple', 'pineapple', 'egg', 'apple', 'egg', 'banana', 'egg'];
+let array2 = [];
+
+function removeEgg(array) {
+  array = array1.slice();
+  array.reverse();
+  eggCount = 1;
+  
+  for(let i = 0; i < array.length; i++) {
+    if (array[i] === 'egg' && eggCount <= 2) {
+      eggCount++;
+      continue;
+    } else {
+      array2.push(array[i]);
+    }
+  }
+  array2.reverse();
+  return array2;
+}
 
 
+console.log(removeEgg(array1));
+
+
+for(let i = 1; i <= 20; i++) {
+  if (i % 3 === 0) { 
+      console.log('Fizz');
+  } 
+  
+  if (i % 5 === 0) {
+      console.log('Buzz');
+  } 
+  
+  if (i % 3 === 0 && i % 5 === 0) {
+  console.log('FizzBuzz');
+  }
+  console.log(i);
+  
+}
+
+
+let index = -1;
+
+function findIndex(array, word) {
+  
+  for (let i = 0; i < array.length; i++) {
+      if (array[i] === word) {
+        index = i;
+        return index;
+      } 
+}
+return -1;
+}
+console.log(findIndex(['green', 'red', 'blue', 'red'], 'blue'));
+console.log(findIndex([]));
+*/
+
+let newArray = [];
+
+function findIndex(array, word) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === word) {
+      return i;
+    }
+  }
+
+  return -1;
+}
+
+function unique(array) {
+  const result = [];
+
+  for (let i = 0; i < array.length; i++) {
+    const word = array[i];
+
+    // Using the findIndex() function from above, we
+    // can check if the string is already in the
+    // result array. If it's not in the result array
+    // (index is -1), then add it to the result array.
+    if (findIndex(result, word) === -1) {
+      result.push(word);
+    }
+  }
+
+  return result;
+}
+
+console.log(unique(['green', 'red', 'blue', 'red']));
+console.log(unique(['red', 'green', 'green', 'red']));
