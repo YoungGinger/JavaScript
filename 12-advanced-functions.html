@@ -43,15 +43,52 @@
       run(function() {
         console.log('hello4');
       });
-      */
+      
 
 
       setTimeout(function(){
         console.log('Timeout');
+        console.log('Timeout2');
       }, 3000);
 
-
       console.log('next line');
+
+      setInterval(function() {
+        console.log('interval');
+      }, 3000); 
+
+      console.log('next line 2');
+      
+
+      [
+        'make dinner',
+        'wash dishes',
+        'watch youtube'
+      ].forEach(function(value, index) {
+        if (value === 'wash dishes') {
+          return;
+        }
+        console.log(index);
+        console.log(value);
+        
+      });
+      */
+      const add = function() {
+        console.log(2 + 3);
+      }
+
+      add();
+      add();
+
+      function runTwice(fun){
+        fun();
+        fun();
+      }
+
+      runTwice(function() {
+        console.log(2 + 3);
+      });
+
 	  </script>
 	</body>
 </html>
