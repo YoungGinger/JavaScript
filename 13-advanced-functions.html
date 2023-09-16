@@ -7,35 +7,28 @@
     href="styles/12-advanced-functions.css"
     >
 	</head>
+
+  <button onclick="
+
+  " class="js-button">Click</button>
 	<body> 
 
-    <button class="js-start-button" onclick="
-      finished();
-    ">start</button>
+	  <script>
+      const buttonElement = document.querySelector('.js-button');
 
-    <button class="js-button" onclick="
-      displayMessage();
-    ">Add to cart</button>
-
-    <p class="js-message"></p>
-
-    <button onclick="
-      messages++;
-      displayNotification();
-    ">Add</button>
-    <button onclick="
-         if (messages > 0) {
-        messages--;
-
-        // If there are no new messages, stop displaying
-        // the notification in the tab.
-        if (messages === 0) {
-          stopNotification();
-        }
+      const eventListener = () => {
+        console.log('click');
       }
-    ">Remove</button>
-	  <script src="scripts/12-advanced-function.js">
 
+      buttonElement.addEventListener('click', eventListener);
+
+      buttonElement.removeEventListener('click', eventListener);
+
+      buttonElement.addEventListener('click', () => {
+        console.log('click2');
+      });
+
+      
       /*
       greeting();
       function greeting() {
@@ -94,7 +87,7 @@
         'make dinner',
         'wash dishes',
         'watch youtube'
-      ].forEach(function(value, index) {
+      ].forEach((value, index) => {
         if (value === 'wash dishes') {
           return;
         }
@@ -118,14 +111,40 @@
       runTwice(function() {
         console.log(2 + 3);
       });
-      */
       
-      const arrowFunction = () => {
+      
+      const regularFunction = function (param, param2) {
         console.log('hello');
+        return 5;
+      }
+
+      const arrowFunction = (param, param2) => {
+        console.log('hello');
+        return 5;
       };
 
       arrowFunction();
+
+      const oneParam = param => {
+        console.log(param + 1)
+      };
       
+      oneParam(2);
+
+      const oneLine = () => 2 + 3;
+      console.log(oneLine());
+
+      const object2 = {
+        method: () => {
+
+        },
+        method () {
+
+        }
+      };
+      */
+
+
 	  </script>
 	</body>
 </html>
