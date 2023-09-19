@@ -1,0 +1,29 @@
+body {
+  background-color: grey;
+}
+
+.button {
+background-color: black;
+color: white;
+font-family: 'Gill Sans';
+font-size: 25px;
+border: none;
+border-radius: 10px;
+padding: 30px 30px;
+margin: 0px 10px;
+cursor: pointer;
+}
+
+.div,
+.display {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.display {
+  margin-top: 20px;
+  font-family: 'Gill Sans';
+  font-weight: bold;
+  font-size: 50px;
+}
